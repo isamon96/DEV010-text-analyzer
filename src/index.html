@@ -3,11 +3,33 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Analizador de texto</title>
+  <title>ANALIZADOR DE TEXTO MÁGICO ✨</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Raleway:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <script src="index.js" type="module"></script>
+  <header>
+      <h1>✨✨ANALIZADOR DE TEXTO MÁGICO ESPECIAL ✨✨</h1>
+  </header>
+  <main>
+    <textarea placeholder="Escribe algo..." name="user-input"></textarea>
+    <section class="results">
+      <ul class="metrics">
+        <li class="liMetrics" data-testid="word-count">PALABRAS <span id="palabrasCount"></span></li>
+        <li class="liMetrics" data-testid="character-count">CARACTERES <span id="caracteresCount"></span></li>
+        <li class="liMetrics" data-testid="character-no-spaces-count">CARACTERES SIN SIGNOS NI ESPACIOS <span id="caracteresNoSpaces"></span></li>
+        <li class="liMetrics" data-testid="number-count">NÚMEROS <span id="numeroCount"></span></li>
+        <li class="liMetrics" data-testid="number-sum">SUMA <span id="numeroSum"></span></li>
+        <li class="liMetrics" data-testid="word-length-average">LONGITUD MEDIA <span id="promedio"></span></li>
+      </ul>
+    </section>
+    <button id="reset-button">LIMPIAR</button>
+  </main>
+  <footer>
+    <p>Isabela Mondragón Rodróguez | Laboratoria</p>
+  </footer>
+  
+  <script src="./index.js" type="module"></script>
 </body>
 </html>

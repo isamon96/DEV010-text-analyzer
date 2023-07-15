@@ -1,22 +1,45 @@
 const analyzer = {  
   getWordCount: (text) => {
-    //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
+    text = text.trim();
+    let words = text.split(" ");
+    words = words.filter(word => word.length >0);
+    return words.length;
   },
-  getCharacterCount: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
-  },
+  
+  getCharacterCount: (text) => text.length,
+
   getCharacterCountExcludingSpaces: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
+    const regex = /[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~¡¿«»“”‘’´¨\s]/g;
+    text = text.replace(regex,"");
+    return text.length;
   },
-  getAverageWordLength: (text) => {    
-    //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+
+  getAverageWordLength: (text) => {
+    const regex = /[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~¡¿«»“”‘’´¨\d]/g;
+    text = text.replace(regex,"").trim();
+    const words = text.split(" ");
+    let numberCharacters = 0;
+    words.forEach(word => numberCharacters += word.length);
+    const average = numberCharacters/words.length;
+    return parseFloat(average.toFixed(2));
   },
+
   getNumberCount: (text) => {
-    //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+    const numbersAmount = text.match(/\b\d+(\.\d+)?\b/g);
+    return (numbersAmount !== null) ? numbersAmount.length : 0;
   },
+
   getNumberSum: (text) => {
-    //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+    const numbers = text.match(/\b\d+(\.\d+)?\b/g);
+    let sum = 0;
+    if (numbers !== null) {
+      numbers.forEach(number => {
+        sum += parseFloat(number);
+      });
+    }
+    return sum; 
   },
 };
 
 export default analyzer;
+
