@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ANALIZADOR DE TEXTO MÁGICO ✨</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Raleway:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+      <h1>✨✨ANALIZADOR DE TEXTO MÁGICO ESPECIAL ✨✨</h1>
+  </header>
+  <main>
+    <textarea placeholder="Escribe algo..." name="user-input"></textarea>
+    <section class="results">
+      <ul class="metrics">
+        <li class="liMetrics" data-testid="word-count">PALABRAS: 0</li>
+        <li class="liMetrics" data-testid="character-count">CARACTERES: 0</li>
+        <li class="liMetrics" data-testid="character-no-spaces-count">CARACTERES SIN SIGNOS NI ESPACIOS: 0</li>
+        <li class="liMetrics" data-testid="number-count">NÚMEROS: 0</li>
+        <li class="liMetrics" data-testid="number-sum">SUMA: 0</li>
+        <li class="liMetrics" data-testid="word-length-average">LONGITUD MEDIA: 0</li>
+      </ul>
+    </section>
+    <button id="reset-button">LIMPIAR</button>
+  </main>
+  <footer>
+    <p>Isabela Mondragón Rodróguez | Laboratoria</p>
+  </footer>
+  
+  <script src="./index.js" type="module"></script>
+</body>
+</html>
