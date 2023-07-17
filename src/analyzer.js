@@ -1,8 +1,8 @@
 const analyzer = {  
   getWordCount: (text) => {
-    text = text.trim();
+    text = text.replace(/[^\w\s]/g, '').trim();
     let words = text.split(" ");
-    words = words.filter(word => word.length >0);
+    words = words.filter(word => word.length > 0);
     return words.length;
   },
   
@@ -42,4 +42,5 @@ const analyzer = {
 };
 
 export default analyzer;
+
 
