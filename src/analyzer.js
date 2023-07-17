@@ -1,8 +1,7 @@
 const analyzer = {  
   getWordCount: (text) => {
-    text = text.replace(/[^\w\s]/g, '').trim();
-    let words = text.split(" ");
-    words = words.filter(word => word.length > 0);
+    let words = text.trim().split(" ");
+    words = words.filter(word => word.length > 0 && word.search(/^\W?[a-zA-Z]+\W?$/) !== -1);
     return words.length;
   },
   
@@ -33,14 +32,10 @@ const analyzer = {
     const numbers = text.match(/\b\d+(\.\d+)?\b/g);
     let sum = 0;
     if (numbers !== null) {
-      numbers.forEach(number => {
-        sum += parseFloat(number);
-      });
+      numbers.forEach(number => sum += parseFloat(number));
     }
     return sum; 
   },
 };
 
 export default analyzer;
-
-
