@@ -14,8 +14,8 @@ const analyzer = {
   },
 
   getAverageWordLength: (text) => {
-    const regex = /[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~¡¿«»“”‘’´¨\d]/g;
-    text = text.replace(regex,"").trim();
+    //const regex = /[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~¡¿«»“”‘’´¨\d]/g;
+    text = text.trim();
     const words = text.split(" ");
     let numberCharacters = 0;
     words.forEach(word => numberCharacters += word.length);
@@ -32,7 +32,9 @@ const analyzer = {
     const numbers = text.match(/\b\d+(\.\d+)?\b/g);
     let sum = 0;
     if (numbers !== null) {
-      numbers.forEach(number => sum += parseFloat(number));
+      for (let i = 0; i < numbers.length; i++) {
+        sum += parseFloat(numbers[i]);
+      }
     }
     return sum; 
   },

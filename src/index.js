@@ -11,7 +11,8 @@ const liWordAverage = document.querySelector('li[data-testid="word-length-averag
 
 
 resetButton.addEventListener('click', cleanTextArea);
-textarea.addEventListener('input', updateMetrics);
+//textarea.addEventListener('input', updateMetrics);
+textarea.addEventListener('keyup', updateMetrics);
 
 function cleanTextArea () {
   document.querySelector('textarea[name="user-input"]').value = "";
