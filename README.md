@@ -25,7 +25,6 @@ Text Analyzer es una aplicación sencilla y fácil de usar que permite a los usu
 #### Demo 
 
 ![Demo 1](./src/images/demo1.png)
-![Demo 2](./src/images/demo2.png)
 ![Demo 3](./src/images/demo3.gif)
 
 ------------
