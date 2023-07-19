@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html xml:lang="es" lang="en">
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="word count, character count, average length, sum of numbers">
   <title>TEXT ANALYZER</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Raleway:wght@100&display=swap" rel="stylesheet">
@@ -14,7 +16,9 @@
         <h1>✨✨ANALIZADOR DE TEXTO MÁGICO ESPECIAL ✨✨</h1>
     </header>
     <main>
+      <div id="containerTextArea">
       <textarea placeholder="Escribe algo..." name="user-input"></textarea>
+      </div>
       <section id="results">
         <ul class="metrics">
           <li class="liMetrics" data-testid="word-count">PALABRAS: 0</li>
@@ -29,7 +33,7 @@
     </main>
     <footer>
       <p>Isabela Mondragón Rodróguez | Laboratoria</p>
-      <img id="logo" src="./images/logo.png">
+      <img id="logo" src="./images/logo.png" alt="Logo Laboratoria">
     </footer>
   </div>  
   <script src="./index.js" type="module"></script>
