@@ -6,7 +6,7 @@
     margin: 0%;
   }
   
-  .container {
+  #container {
     display: flex;
     flex-direction: column;
   }
@@ -44,7 +44,7 @@
     outline: none;
   }
   
-  .results {
+  #results {
     margin: 20px 0px;
   }
   
@@ -110,7 +110,7 @@
     justify-content: center;
   }
 
-  .logo {
+  #logo {
     height: 20px;
     margin: 0px 5px;
   }
